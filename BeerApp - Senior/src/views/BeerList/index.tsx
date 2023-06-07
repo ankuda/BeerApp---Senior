@@ -5,18 +5,20 @@ import { Avatar, List, ListItemAvatar, ListItemButton, ListItemText } from '@mui
 import SportsBar from '@mui/icons-material/SportsBar';
 import { useNavigate } from 'react-router-dom';
 
+import styles from '../Home/Home.module.css';
+
 const BeerList = () => {
   const navigate = useNavigate();
   const [beerList, setBeerList] = useState<Array<Beer>>([]);
 
   // eslint-disable-next-line
-  useEffect(fetchData.bind(this, setBeerList), []);
+  useEffect(() => fetchData(setBeerList), []);
 
   const onBeerClick = (id: string) => navigate(`/beer/${id}`);
 
   return (
     <article>
-      <section>
+      <section className={styles.listContainer}>
         <header>
           <h1>BeerList page</h1>
         </header>

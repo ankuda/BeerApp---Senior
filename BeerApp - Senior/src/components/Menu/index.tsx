@@ -15,6 +15,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import TopBar from '../TopBar';
+import logo from '../../assets/logo.png';
 
 const drawerWidth = 240;
 
@@ -32,22 +33,23 @@ export default function ResponsiveDrawer(props: Props) {
   const drawer = (
     <>
       <Divider />
+      <img src={logo} alt="Logo" style={{ maxHeight: '150px', backgroundColor: '#ffffff', }} />
       <List>
-        <Link component={RouterLink} to={`/`}>
+        <Link component={RouterLink} to={`/`} style={{ color: '#000000' }}>
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <HomeIcon />
+                <HomeIcon style={{ color: '#000000' }} />
               </ListItemIcon>
               <ListItemText primary='Home' />
             </ListItemButton>
           </ListItem>
         </Link>
-        <Link component={RouterLink} to={`/beer`}>
+        <Link component={RouterLink} to={`/beer`} style={{ color: '#000000' }}>
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <SportsBar />
+                <SportsBar style={{ color: '#000000' }} />
               </ListItemIcon>
               <ListItemText primary='Beer List' />
             </ListItemButton>
@@ -83,7 +85,7 @@ export default function ResponsiveDrawer(props: Props) {
           variant='permanent'
           sx={{
             display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#ffc72c', },
           }}
           open
         >
@@ -95,7 +97,7 @@ export default function ResponsiveDrawer(props: Props) {
         sx={{
           flexGrow: 1,
           p: 3,
-          width: { sm: `calc(100% - ${drawerWidth}px)`, background: '#f7f7f7' },
+          width: { sm: `calc(100% - ${drawerWidth}px)`, backgroundColor: '#f7f7f7' },
         }}
       >
         <Toolbar />

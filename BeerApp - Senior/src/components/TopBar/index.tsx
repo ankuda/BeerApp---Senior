@@ -11,6 +11,7 @@ const TopBar = (props: Props) => {
     <AppBar
       position="fixed"
       sx={{
+        backgroundColor: '#62b5e5',
         width: { sm: `calc(100% - ${props.drawerWidth}px)` },
         ml: { sm: `${props.drawerWidth}px` },
       }}
@@ -26,7 +27,6 @@ const TopBar = (props: Props) => {
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" noWrap component="div">
-          V
         </Typography>
       </Toolbar>
     </AppBar>
