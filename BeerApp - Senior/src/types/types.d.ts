@@ -10,6 +10,6 @@ type TYPE =
   | 'proprietor'
   | 'closed';
 
-type SORT = 'asc' | 'desc';
+type SORT = 'type,name:asc' | 'type,name:desc';
 
 export type { TYPE, SORT };
