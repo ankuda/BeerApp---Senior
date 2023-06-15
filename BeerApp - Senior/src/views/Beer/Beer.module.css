@@ -1,10 +1,12 @@
 .container {
-  padding: 5px 24px 24px 24px;
+  padding: 1.3rem 1.5rem 1.5rem;
   background-color: #ffffff;
 }
 
 .beerContainer {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .beerList {

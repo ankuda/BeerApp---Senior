@@ -1,3 +1,17 @@
-a {
-  /* text-decoration: none; */
+ul {
+  padding-inline-start: 1rem;  
+}
+
+[class^='Pagination_container'] {
+  .MuiButtonGroup-grouped {
+    background-color: #ffffff;
+    border-color: #62b5e5;
+    color: #62b5e5;
+
+    &:hover, 
+    &:focus {
+      border-color: #62b5e5;
+      color: #62b5e5;
+    }
+  }
 }

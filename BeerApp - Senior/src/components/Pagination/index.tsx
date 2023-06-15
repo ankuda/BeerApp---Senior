@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button, ButtonGroup, Select, MenuItem } from '@mui/material';
 
+import styles from './Pagination.module.css';
+
 interface PaginationProps {
   currentPage: number;
   totalPages: number;
@@ -25,7 +27,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, pageSi
     for (let i = 1; i <= totalPages; i++) {
       buttons.push(
         <Button
-          key={i}
+          key={`page_${i}`}
           variant={i === currentPage ? 'contained' : 'outlined'}
           onClick={() => handlePageChange(i)}
         >
@@ -38,11 +40,11 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, pageSi
   };
 
   return (
-    <div>
-      <ButtonGroup style={{ padding: '1rem 1.2rem 0' }}>
+    <div className={styles.container}>
+      <ButtonGroup>
         {renderPageButtons()}
       </ButtonGroup>
-      <Select size='small' value={pageSize} onChange={(event) => handlePerPageChange(event.target.value as number)}>
+      <Select size='small' value={pageSize} onChange={(event) => handlePerPageChange(event.target.value as number)} className={styles.per_page}>
         <MenuItem value={10}>10 per page</MenuItem>
         <MenuItem value={20}>20 per page</MenuItem>
         <MenuItem value={50}>50 per page</MenuItem>

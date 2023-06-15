@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.3rem;
+}
+
+.per_page {
+  margin-left: 1.5rem;
+}

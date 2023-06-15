@@ -9,6 +9,8 @@ import SearchInput from '../../components/SearchInput';
 import { searchData } from '../Home/utils';
 import Pagination from '../../components/Pagination';
 
+import styles from '../Home/Home.module.css';
+
 const BeerList = () => {
   const navigate = useNavigate();
   const [beerList, setBeerList] = useState<Array<Beer>>([]);
@@ -52,13 +54,13 @@ const BeerList = () => {
 
   return (
     <article>
-      <section>
+      <section className={styles.listContainer}>
         <header>
           <h1>BeerList page ({beerList?.length})</h1>
 
           <SearchInput onSearch={handleSearch}>
             <div>
-              <label htmlFor='sortOrder'>Order:</label>
+              <label htmlFor='sortOrder' style={{ paddingRight: '0.5rem' }}>Order:</label>
               <Select id='sortOrder' size='small' value={sortOrder} onChange={handleOrderChange}>
                 <MenuItem value='type,name:asc'>Ascending</MenuItem>
                 <MenuItem value='type,name:desc'>Descending</MenuItem>

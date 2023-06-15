@@ -59,7 +59,7 @@ const SavedItemsList: React.FC<SavedItemsListProps> = ({ savedList }) => {
     <Paper>
       <div className={styles.listContainer}>
         <div className={styles.listHeader}>
-          <h3>Saved items {!!savedList?.length && `(${savedList?.length})`}</h3>
+          <h3 className={styles.customSavedItemsHeader}>Saved items {!!savedList?.length && `(${savedList?.length})`}</h3>
           <Button variant="contained" size="small">
             Remove all items
           </Button>

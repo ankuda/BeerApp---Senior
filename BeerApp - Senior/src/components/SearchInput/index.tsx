@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import { TextField, debounce } from '@mui/material';
+
 import styles from '../../views/Home/Home.module.css';
 
 interface SearchInputProps {
@@ -25,7 +26,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ onSearch, children, debounceT
 	};
 
 	return (
-		<div className={styles.listHeader}>
+		<div className={styles.listHeader} >
 			<TextField
 				label="Filter..."
 				value={searchQuery}

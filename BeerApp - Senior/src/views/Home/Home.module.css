@@ -3,13 +3,23 @@
 }
 
 .listContainer {
-  padding: 20px;
+  padding: 1.3rem;
   margin-bottom: 20px;
   background: #fff;
+ 
+  :is(h1, h2, h3) {
+    margin-top: 0;
+  }
 }
 
 .listHeader {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   align-items: center;
   justify-content: space-between;
+}
+
+.customSavedItemsHeader {
+  margin-bottom: 0;
 }
